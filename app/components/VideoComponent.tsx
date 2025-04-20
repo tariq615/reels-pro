@@ -1,7 +1,6 @@
 import { IKVideo } from "imagekitio-next";
 import Link from "next/link";
 import { IVideo } from "@/models/Video";
-import { log } from "node:console";
 
 export default function VideoComponent({ video }: { video: IVideo }) {
   console.log(video, "video");

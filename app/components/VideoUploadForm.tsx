@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { IKUploadResponse } from "imagekitio-next/dist/types/components/IKUpload/props";
-import { Loader2, Video } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { useNotification } from "./Notification";
 import { apiClient } from "@/lib/api-client";
 import FileUpload from "./Fileupload";
@@ -13,6 +13,12 @@ interface VideoFormData {
   description: string;
   videoUrl: string;
   thumbnailUrl: string;
+  controls: boolean;
+  transformation: {
+      height: number;
+      width: number;
+      quality?: number;
+      };
 }
 
 export default function VideoUploadForm() {
